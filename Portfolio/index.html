@@ -1,0 +1,142 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dhanu_Resume</title>
+    <link rel="shortcut icon" href="ion.webp" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="dhanu.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">My Portfolio</h1>
+      <hr />
+      <section class="summary">
+        <h3>Summary</h3>
+        <p>I am Dhanush, Full stack web dev</p>
+        <img src="profile.jpeg" alt="profile icon" class="profile-img" />
+      </section>
+
+      <hr />
+      <section class="skills">
+  <h3>Skills</h3>
+  <div class="skill-cards">
+    <div class="skill-category">
+      <h4><i class="fa-solid fa-code"></i> Technical Skills</h4>
+      <ul>
+        <li><i class="fa-brands fa-html5"></i> HTML</li>
+        <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+        <li><i class="fa-brands fa-js"></i> JavaScript</li>
+        <li><i class="fa-brands fa-python"></i> Python</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h4><i class="fa-solid fa-star"></i> Non-Technical Skills</h4>
+      <ul>
+        <li><i class="fa-solid fa-person-swimming"></i> Swimming</li>
+        <li><i class="fa-solid fa-music"></i> Dancing</li>
+        <li><i class="fa-solid fa-book-open-reader"></i> Reading</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+      <hr />
+      <section class="education">
+        <h3>Education</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Sl. No</th>
+              <th>Institution</th>
+              <th>Board</th>
+              <th>YOP</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Vignan</td>
+              <td>University</td>
+              <td>2027</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Narayana</td>
+              <td>BSEAP</td>
+              <td>2023</td>
+              <td>91</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Sri Chaitanya</td>
+              <td>SSC</td>
+              <td>2021</td>
+              <td>99.6</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <hr />
+      <section class="contact">
+        <h3>Contact Me</h3>
+        <form>
+          <input type="text" placeholder="Enter name" />
+          <input type="email" placeholder="Enter email" />
+          <input type="number" placeholder="Enter phone" />
+          <textarea placeholder="Enter your message"></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <hr />
+      <section class="social">
+        <h3>Social Links</h3>
+        <div class="icons">
+          <a href="https://www.linkedin.com/in/dhanush-matcha-77113732a/" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+         <a href="https://github.com/dhanushmatcha" target="_blank">
+  <i class="fa-brands fa-github"></i>
+</a>
+
+          <a href="#"><i class="fa-brands fa-hackerrank"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </section>
+    </div>
+    <script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent actual form submission
+
+    const name = form.querySelector('input[type="text"]').value.trim();
+    const email = form.querySelector('input[type="email"]').value.trim();
+    const phone = form.querySelector('input[type="number"]').value.trim();
+    const message = form.querySelector("textarea").value.trim();
+
+    if (!name || !email || !phone || !message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    // You can also add more validation like email or phone format here
+
+    alert("Thank you! Your message has been submitted.");
+    form.reset(); // clear the form
+  });
+</script>
+
+  </body>
+</html>
